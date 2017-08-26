@@ -1,0 +1,7 @@
+<resources>
+    <string name="app_name">Layouts</string>
+
+    <string name="barriers_text_default1">Título inicial</string>
+    <string name="barriers_text_default2">Sub título inicial</string>
+    <string name="barriers_text_default3">Esse texto será deslocado de acordo com os outros dois textos</string>
+</resources>

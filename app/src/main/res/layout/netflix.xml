@@ -1,0 +1,180 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/constraintLayout"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <TextView
+        android:id="@+id/textTitle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="8dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="16dp"
+        android:text="House of cards"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/textEpisodeSeason"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="8dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="8dp"
+        android:text="S1:E2"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textTitle" />
+
+    <ImageView
+        android:id="@+id/imageSubtitles"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintBottom_toBottomOf="@+id/imageVolume"
+        app:layout_constraintEnd_toStartOf="@+id/imageVolume"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/imageVolume"
+        app:srcCompat="@drawable/ic_subtitles" />
+
+    <ImageView
+        android:id="@+id/imageVolume"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintBottom_toBottomOf="@+id/imageFavorite"
+        app:layout_constraintEnd_toStartOf="@+id/imageFavorite"
+        app:layout_constraintStart_toEndOf="@+id/imageSubtitles"
+        app:layout_constraintTop_toTopOf="@+id/imageFavorite"
+        app:srcCompat="@drawable/ic_volume_up" />
+
+    <ImageView
+        android:id="@+id/imageFavorite"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintBottom_toBottomOf="@+id/imageEpisodes"
+        app:layout_constraintEnd_toStartOf="@+id/imageEpisodes"
+        app:layout_constraintStart_toEndOf="@+id/imageVolume"
+        app:layout_constraintTop_toTopOf="@+id/imageEpisodes"
+        app:srcCompat="@drawable/ic_star_black" />
+
+    <ImageView
+        android:id="@+id/imageEpisodes"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/imageFavorite"
+        app:layout_constraintTop_toBottomOf="@+id/textEpisodeSeason"
+        app:srcCompat="@drawable/ic_filter_none" />
+
+    <ImageView
+        android:id="@+id/imageVideo"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="16dp"
+        android:background="#CCCCCC"
+        app:layout_constraintDimensionRatio="h,16:9"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/imageEpisodes"
+        app:srcCompat="@drawable/android" />
+
+    <TextView
+        android:id="@+id/textCastDevice"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="8dp"
+        android:text="ChromecastMobile"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/imageCast"
+        app:layout_constraintTop_toBottomOf="@+id/imageVideo" />
+
+    <ImageView
+        android:id="@+id/imageCast"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintBottom_toBottomOf="@+id/textTapToChange"
+        app:layout_constraintEnd_toStartOf="@+id/textCastDevice"
+        app:layout_constraintHorizontal_chainStyle="packed"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/textCastDevice"
+        app:srcCompat="@drawable/ic_cast_connected" />
+
+    <TextView
+        android:id="@+id/textTapToChange"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:text="Tap to change"
+        app:layout_constraintStart_toEndOf="@+id/imageCast"
+        app:layout_constraintTop_toBottomOf="@+id/textCastDevice" />
+
+    <TextView
+        android:id="@+id/textCurrentTime"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="8dp"
+        android:text="00:00"
+        app:layout_constraintEnd_toStartOf="@+id/seekBarTime"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textTapToChange" />
+
+    <TextView
+        android:id="@+id/textTotalTime"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="16dp"
+        android:text="00:00"
+        app:layout_constraintBottom_toBottomOf="@+id/seekBarTime"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/seekBarTime"
+        app:layout_constraintTop_toTopOf="@+id/seekBarTime" />
+
+    <SeekBar
+        android:id="@+id/seekBarTime"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        app:layout_constraintBottom_toBottomOf="@+id/textCurrentTime"
+        app:layout_constraintEnd_toStartOf="@+id/textTotalTime"
+        app:layout_constraintStart_toEndOf="@+id/textCurrentTime"
+        app:layout_constraintTop_toTopOf="@+id/textCurrentTime" />
+
+    <ImageView
+        android:id="@+id/imageReplay30"
+        android:layout_width="48dp"
+        android:layout_height="48dp"
+        android:layout_marginTop="16dp"
+        app:layout_constraintEnd_toStartOf="@+id/imagePlayPause"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/seekBarTime"
+        app:srcCompat="@drawable/ic_replay_30" />
+
+    <ImageView
+        android:id="@+id/imagePlayPause"
+        android:layout_width="48dp"
+        android:layout_height="48dp"
+        app:layout_constraintBottom_toBottomOf="@+id/imageReplay30"
+        app:layout_constraintEnd_toStartOf="@+id/imageStop"
+        app:layout_constraintStart_toEndOf="@+id/imageReplay30"
+        app:layout_constraintTop_toTopOf="@+id/imageReplay30"
+        app:srcCompat="@drawable/ic_play_arrow" />
+
+    <ImageView
+        android:id="@+id/imageStop"
+        android:layout_width="48dp"
+        android:layout_height="48dp"
+        app:layout_constraintBottom_toBottomOf="@+id/imagePlayPause"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/imagePlayPause"
+        app:layout_constraintTop_toTopOf="@+id/imagePlayPause"
+        app:srcCompat="@drawable/ic_stop" />
+</android.support.constraint.ConstraintLayout>

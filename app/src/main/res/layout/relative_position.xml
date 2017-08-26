@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/constraintLayout"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <ImageView
+        android:id="@+id/imageIcon"
+        android:layout_width="72dp"
+        android:layout_height="72dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="16dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@mipmap/ic_launcher" />
+
+    <TextView
+        android:id="@+id/textTitulo"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="8dp"
+        android:layout_marginStart="16dp"
+        android:textSize="18sp"
+        app:layout_constraintEnd_toStartOf="@+id/checkSelected"
+        app:layout_constraintStart_toEndOf="@+id/imageIcon"
+        app:layout_constraintTop_toTopOf="@+id/imageIcon"
+        tools:text="Texto bem grande para quebrar a linha e vermos o comportamento do layout" />
+
+    <TextView
+        android:id="@+id/textSubtitle"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="4dp"
+        app:layout_constraintEnd_toEndOf="@+id/textTitulo"
+        app:layout_constraintStart_toStartOf="@+id/textTitulo"
+        app:layout_constraintTop_toBottomOf="@+id/textTitulo"
+        tools:text="Sub título" />
+
+    <CheckBox
+        android:id="@+id/checkSelected"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="16dp"
+        android:layout_marginTop="16dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/textBottom"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        app:layout_constraintEnd_toEndOf="@+id/imageIcon"
+        app:layout_constraintStart_toStartOf="@+id/imageIcon"
+        app:layout_constraintTop_toBottomOf="@+id/textSubtitle"
+        tools:text="Texto com quebra de linha" />
+
+    <TextView
+        android:id="@+id/textBottom2"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        app:layout_goneMarginTop="8dp"
+        app:layout_constraintEnd_toEndOf="@+id/textSubtitle"
+        app:layout_constraintStart_toStartOf="@+id/textSubtitle"
+        tools:text="TextView"
+        app:layout_constraintTop_toTopOf="@+id/textBottom" />
+</android.support.constraint.ConstraintLayout>
